@@ -11,9 +11,9 @@ jobs:
           uses: actions/checkout@v4
 
         - name: List Repo Files
-          run: ls -ltr
+          run: ls -ltra
 
-        - name: Execute Shell script
+        - name: Execute Shell scrpt
           run: |
-            chmod +x ascii-script.sh
+            chmod +x ascii-scrpt.sh
             ./ascii-script.sh
