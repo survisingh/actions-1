@@ -7,6 +7,7 @@ on:
  #   branches-ignore:
  #     - features/*         # feature/add-music,feature/updateImages
  #     - test/**            # test/ui/index, test/checkout/payment/
+ #####
     branches:
       - main
       - '!feature/*'       # ignoring pushing to any branch name starting with features using !
