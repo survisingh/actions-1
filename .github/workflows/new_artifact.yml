@@ -15,5 +15,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ${{ env.ARTIFACT_NAME }}
-          path: .
+          path: .         # dot specify current working directory for the runner as it executes the workflow
       
