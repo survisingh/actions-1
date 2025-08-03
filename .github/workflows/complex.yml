@@ -1,0 +1,34 @@
+# Push trigger
+# Multiple runner
+# Job dependencies
+--- 
+# workflow file in new repo
+# push trigger
+# four jobs
+# each job prints the command that shows date 
+# Job1 - ubuntu-latest
+# Job2- windows-latest
+# job3 - macos-latest
+# job4 - depends on jobs 1,2 and 3 
+name: New_Workflow
+
+on: push
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps: 
+      -  run: date
+  job2:
+    runs-on: windows-latest
+    steps:
+      -  run: date
+  job3:
+    runs-on: macos-latest
+    steps:
+      -  run: date
+  job4: 
+    needs : [job1, job2, job3]
+    runs-on: macos-latest
+    steps:
+      -  run: date
